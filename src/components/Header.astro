@@ -1,0 +1,16 @@
+---
+import Image from "astro/components/Image.astro";
+import Headerfoto from "../../public/images/image.webp"
+
+---
+<section class="flex flex-col md:flex-row items-center gap-6 bg-[#9ed1db] p-16 rounded-3xl" >
+    <article class="flex flex-col gap-5">
+        <header class="w-full">
+            <h1 class="text-5xl text-center font-bold">"Capturamos la <span class="text-[#f3ede8]">esencia</span> de tu historia"</h1>
+        </header>
+        <p class="text-center">
+            <span>En el corazón de la Riviera Maya, <span class="text-[#f3ede8] font-semibold">Zamá Studios</span> se erige como un faro de creatividad y excelencia en producción audiovisual.</span> 
+        </p>
+    </article>
+    <Image class="rounded-3xl w-full md:w-1/2" src={Headerfoto} loading={"eager"} alt="Fotografia de una madre abrazando a un bebe en la playa">
+</section>

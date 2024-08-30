@@ -16,11 +16,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="py-32 px-4 flex flex-col items-center gap-20">
 		<slot />
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -33,8 +34,8 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: Montserrat, system-ui, sans-serif;
+		background: #f3ede8;
 	}
 	code {
 		font-family:
