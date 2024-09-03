@@ -1,22 +1,25 @@
 ---
 // Testimonials.astro
+import Image from "astro/components/Image.astro";
+import anaFoto from "../../public/images/ana.webp"
+import { lazy } from "astro:schema";
 const testimonials = [
   {
     name: "Carlos García",
     role: "CEO de Tech Innovators",
-    image: "../../public/images/ana.webp",
+    image: anaFoto,
     testimonial: "Este servicio ha transformado completamente la manera en que operamos. ¡Altamente recomendado!"
   },
   {
     name: "Ana López",
     role: "Gerente de Marketing en Creative Minds",
-    image: "../../public/images/ana.webp",
+    image: anaFoto,
     testimonial: "“Trabajar con Zamá Studio fue una experiencia increíble. Capturaron exactamente lo que queríamos transmitir y lo llevaron a un nivel que ni siquiera imaginábamos. ¡Altamente recomendados!”"
   },
   {
     name: "Luis Martínez",
     role: "Fundador de StartUp Hub",
-    image: "../../public/images/ana.webp",
+    image: anaFoto,
     testimonial: "Su enfoque en los detalles y la calidad es inigualable. Una experiencia excelente de principio a fin."
   }
 ];
@@ -28,7 +31,7 @@ const testimonials = [
       {testimonials.map((testimonial) => (
         <div class="bg-white p-6 rounded-3xl shadow-lg">
           <div class="flex items-center mb-4">
-            <img src={testimonial.image} alt={testimonial.name} class="w-12 h-12 rounded-full mr-4"/>
+            <Image src={testimonial.image} alt={testimonial.name} class="w-12 h-12 rounded-full mr-4" loading={'lazy'}/>
             <div>
               <h3 class="text-xl font-semibold">{testimonial.name}</h3>
               <p class="text-gray-600">{testimonial.role}</p>
