@@ -2,9 +2,9 @@
 import Image from "astro/components/Image.astro"
 import Aboutfoto from "../../public/images/amanecer.webp"
 ---
-<section class="flex flex-col-reverse md:flex-row text-center gap-6 items-center" id="about">
-    <Image class="rounded-3xl w-full md:w-1/2 md:h-96 shadow-xl" src={Aboutfoto} loading={'lazy'} alt="Fotografia de un amanecer en la playa"/>
-    <article class="flex flex-col gap-6">
+<section class="relative flex flex-col-reverse md:flex-row text-center gap-6 items-center justify-center p-4 rounded-2xl bg-cover bg-center h-screen" id="about" style="background-image: url(../../public/images/amanecer.webp);">
+    <div class="absolute inset-0 bg-black opacity-40 rounded-2xl"></div>
+    <article class="flex flex-col gap-6 text-white relative z-10" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
         <h2 class="text-3xl md:text-4xl font-bold">¿Quiénes Somos?</h2>
         <p>Aspiramos a ser el referente más confiable e innovador en la Riviera Maya, donde la información de calidad y la creatividad visual se unen para dar vida a historias que inspiran y conectan. Nuestra visión es liderar el futuro de la comunicación enel Caribe, estableciendo nuevas normas de excelencia en servicios informativos, publicidad y producciones audiovisuales que dejen una huella perdurable.</p>
         </article>
